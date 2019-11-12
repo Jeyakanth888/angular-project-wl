@@ -1,0 +1,15 @@
+{
+    "/jenkins": {
+        "target": "https://blr03.teksystems.com",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/otherjenkins": {
+        "target": "http://10.188.80.137:8080",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/otherjenkins/": "/"
+        }
+    }
+}

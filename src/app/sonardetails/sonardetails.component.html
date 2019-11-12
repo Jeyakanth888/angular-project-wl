@@ -1,0 +1,5 @@
+<div *ngIf="safeHtmlContent!=''" [innerHtml]="safeHtmlContent | safehtml  ">
+</div>
+<div *ngIf="safeHtmlContent==''" class="text-center">
+    <p class="text-center no-sonar-data">No code quality data available</p>
+</div>

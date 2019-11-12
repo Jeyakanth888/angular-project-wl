@@ -1,0 +1,64 @@
+<div class="page-loader" *ngIf="preloader===true">
+  <img class="img-fluid" src="./assets/images/ploader.gif" alt="loader">
+</div>
+
+<div class="container-fluid builds-content" #buildsection [style.max-height]="scrollStyles.mheight">
+  <div class="row " *ngIf="preloader===false && apiError.response===true">
+    <div class="col-md-12 {{build.name}}" #builds *ngFor='let build of buildDetails; let i =index' >
+      <div class="card builds-card " [ngClass]="build.color">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9 col-sm-8 col-lg-9 pull-left">
+              <div class="project-card-name">
+                <h5 class="card-title project-title">
+                  <a>{{build.name}}</a>
+                </h5>
+                <p class="show-build-time">
+                  <span *ngIf="build.buildNo=='0'">-</span>
+                  <span *ngIf="build.buildNo!='0'">Last Build (#{{build.buildNo}}),{{build.buildAt}}</span>
+                </p>
+              </div>
+              <div class="icon-cloud" [ngClass]="build.healthClass==''?'no-cloud' : build.healthClass">
+                <!-- <img src="./assets/images/thunder.svg" alt="cloud" class="icon-cloud">-->
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-lg-3">
+              <!-- <p class="sonar_status">Sonar Status
+                <span class="level level-small ERROR">Failed</span>
+              </p>-->
+              <!-- <p class="build-ratings ">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </p>-->
+              <p class="git-commits ">Total Git Commits
+                <span>#{{build.gitCount}}</span>
+              </p>
+            </div>
+          </div>
+          <div class="row sonar-details-row">
+            <div class="col-md-10 col-lg-10">
+              <app-sonardetails [sonarDetails]="build.htmlcontent"></app-sonardetails>
+            </div>
+            <div class="col-md-2 col-lg-2">
+               <!-- <app-jirachart [jiraDetails]="build.jira"></app-jirachart> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 offset-md-2 error-box" *ngIf='apiError.response===false'>
+    <div class="row card">
+      <div class="card-body text-center">
+        <h4>Oops! An Error Occured.</h4>
+        <h6>The Server returned a {{apiError.status}} {{apiError.statusText}}</h6>
+        <p>Something is broken. We will fix it as soon as possible, sorry for inconvenience caused</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modalpopup [(failureBuildsDetails)]="lastFailureBuilds"></app-modalpopup>

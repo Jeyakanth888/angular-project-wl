@@ -1,0 +1,9 @@
+<!--<div *ngIf="chart" id="chart-div">
+  <canvas id="canvas" #canvas>{{chart}}</canvas>
+</div>-->
+
+
+<div class="text-center">
+    <h5 class="jira-title">Jira Bugs</h5>
+    <p *ngIf="jiraDetails" class="jira-bug-count" [ngClass]="jiraDetails.issues.length===0?'level-A' : 'level-E'">{{jiraDetails.issues.length}}</p>
+</div>

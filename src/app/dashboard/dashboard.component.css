@@ -1,0 +1,300 @@
+.container-fluid{
+    background-color: #F3F3F3;
+}
+
+/* #ffc130 - yellow, blue -green ,red - */
+.project-card-name{
+    color:#0B7FBC;
+   /* margin-top:-15px;*/
+    display:inline-block;
+}
+.project-title{
+    margin:3px 0px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.show-build-time,.git-commits,.build-ratings{
+    color:#838080;
+}
+.sonar_status{
+    margin:0;
+}
+.icon-cloud{
+    display:inline-block;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    vertical-align:middle;
+}
+.icon-cloud.icon-health-80plus{
+    background-image: url("../../assets/images/day.svg");
+}
+.icon-cloud.icon-health-60to79{
+    background-image: url("../../assets/images/cloudy-day-3.svg");
+}
+.icon-cloud.icon-health-40to59{
+    background-image: url("../../assets/images/cloudy.svg");
+}
+.icon-cloud.icon-health-20to39{
+    background-image: url("../../assets/images/rainy-7.svg");
+}
+.icon-cloud.icon-health-0to19{
+    background-image: url("../../assets/images/thunder.svg");
+    opacity: 0.5;
+}
+.level.ERROR {
+    background-color: #d4333f;
+}
+.level.OK {
+    background-color: #0a0;
+}
+.level {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: .02em;
+    text-align: center;
+    text-shadow: 0 0 1px rgba(0,0,0,.35);
+    border-radius:24px;
+    font-weight: 400;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.builds-card{
+    box-shadow:#000000 ;
+    border:none;
+    padding:5px;
+}
+.PreJob {
+  display: none;
+}
+.page-loader{
+    position: absolute;
+    top:50%;
+    right:50%;
+    width:100px;
+    height:100px;
+    z-index:10;
+    margin-top:-50px;
+    margin-right:-50px;
+}
+.error-box{
+    position: absolute;
+    top:36%;
+}
+.builds-content{
+  /*  max-height:84%;
+    max-height:84vh;*/
+    overflow-y: scroll;
+    margin-top:40px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.builds-card .card-body{
+    padding:0.5em;
+}
+.build-ratings{
+    margin:0px;
+}
+.build-ratings i.fa-star{
+    padding:0px 5px;
+}
+.build-ratings i.fa-star:first-child{
+    padding-left:0px;
+}
+.build-ratings i.fa-star.rated{
+    color:#f3cb38;
+}
+.builds-card.blue{
+    border-right-color: #A4C106;
+}
+.builds-card.red{
+    border-right-color: #e01716;
+}
+.builds-card.notbuilt{
+    border-right-color:  #ffc130;
+}
+.builds-card.blue_anime{
+    animation:borderchange 5s infinite;
+    -webkit-animation:borderchange 5s infinite;
+}
+@keyframes borderchange{
+        from{
+            border-right-color: cyan;
+        }
+        to{
+            border-right-color: blue;
+        }
+}
+@-webkit-keyframes borderchange{
+    from{
+        border-right-color: cyan;
+    }
+    to{
+        border-right-color: blue;
+    }
+}
+.builds-card{
+    margin:10px 1important;
+}
+.git-commits{
+    text-align:right;
+    letter-spacing: 1px;
+}
+@media only screen and (min-width:320px)  {
+    .builds-card{
+        border-radius:4px;
+        margin:13px;
+        height:auto;
+    }
+
+    .project-title{
+        font-size:0.5em;
+    }
+    .show-build-time,.git-commits,.build-ratings{
+        font-size:0.5em;
+    }
+    .icon-cloud{
+        width: 70px;
+        height: 35px;
+        margin-top:-20px;
+    }
+    .sonar_status{
+        font-size:0.5em;
+    }
+    .level{
+        min-width: 24px;
+        height: 12px;
+        line-height: 12px;
+        font-size: 0.4em;
+    }
+
+    .project-card-name{
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .builds-card{
+        border-right:18px solid #A4C106;
+        border-radius:4px;
+        margin:13px;
+        height:80%;
+    }
+    .project-title{
+        font-size:0.75em;
+    }
+    .show-build-time,.git-commits,.build-ratings{
+        font-size:0.75em;
+    }
+    .icon-cloud{
+        width: 80px;
+        height: 40px;
+        margin-top:-20px;
+    }
+    .sonar_status{
+        font-size:0.75em;
+    }
+    .level{
+        min-width: 36px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 0.6em;
+    }
+
+    .project-card-name{
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .builds-card{
+        border-right:18px solid #A4C106;
+        border-radius:4px;
+        margin:0.5em;
+        height:75%;
+    }
+
+    .project-title{
+        font-size:0.6em;
+    }
+    .show-build-time,.git-commits,.build-ratings{
+        font-size:0.5em;
+    }
+    .icon-cloud{
+        width: 88px;
+        height: 44px;
+        margin-top:-22px;
+    }
+    .sonar_status{
+        font-size:0.5em;
+    }
+    .level{
+        min-width: 30%;
+        height: 10%;
+        line-height: 15px;
+        font-size: 0.5;
+    }
+
+}
+@media only screen and (min-width: 1224px) {
+    .builds-card{
+        border-right:24px solid #A4C106;
+        border-radius:6px;
+       min-height: 83%;
+    }
+
+    .project-title{
+        font-size:1.5em;
+    }
+    .show-build-time,.git-commits,.build-ratings,.sonar_status{
+        font-size:1.25em;
+    }
+    .icon-cloud{
+        width: 180px;
+        height: 90px;
+        margin-top:-40px;
+    }
+
+    .level{
+        min-width: 49px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 1em;
+    }
+
+    .project-card-name{
+        margin-left: 8px;
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    .builds-card{
+        border-right:39px solid #A4C106;
+        border-radius:10px;
+        min-height: 83%;
+    }
+
+    .project-title{
+        font-size:2em;
+    }
+    .show-build-time,.git-commits,.build-ratings,.sonar_status{
+        font-size: 1.25em;
+    }
+    .icon-cloud{
+        width: 240px;
+      height: 120px;
+        margin-top:-40px;
+    }
+
+    .level{
+        min-width: 35%;    /* 81px */
+        height: 25%;       /* 25px */
+        line-height:1.5em;
+        font-size: 0.8em;
+    }
+
+    .project-card-name{
+        margin-left: 32px;
+    }
+}
+

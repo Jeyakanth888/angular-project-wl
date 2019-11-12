@@ -1,0 +1,35 @@
+#chart-div{
+    margin-top:-75px;
+    height:135px;
+    float: right;
+    width:100%;
+}
+#chart-div>canvas{
+    float:right;
+}
+.jira-title {
+    margin: 3px 0px;
+    text-transform: capitalize;
+    letter-spacing: 0.75px;
+    color: #0B7FBC;
+}
+.jira-bug-count.level-A{
+    color:#0a0;
+}
+.jira-bug-count.level-E{
+    color:#e00;
+}
+.jira-bug-count{
+    font-weight:400;
+}
+@media only screen and (min-width: 1224px) {
+    .jira-title,.jira-bug-count {
+        font-size:1.25em;
+    }
+   
+}
+@media only screen and (min-width: 1824px) {
+    .jira-title,.jira-bug-count {
+        font-size:1.5em;
+    }
+}

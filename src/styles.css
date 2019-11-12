@@ -1,0 +1,405 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { width: 100%; margin: 0; }
+body{
+    background-color:#F3F3F3 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+.boxed-group-header{
+    display:none !important;
+}
+.project-card-dates{
+    display:none !important;
+}
+.project-card-ncloc{
+    display:none !important;
+}
+.spacer-right>svg>g{
+    display:none !important;
+}
+.project-card-measures {
+    display: flex;
+    margin: 0;
+    float:left;
+}
+.project-card-measure {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    box-sizing: border-box; 
+}
+.project-card-measure-inner {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+.project-card-measure-number {
+    line-height: 25px;
+    white-space: nowrap;
+}
+.spacer-right {
+    margin-right: 8px;
+}
+.rating-A {
+    background-color: #0a0;
+}
+.rating-B{
+    background-color: #b0d513; 
+}
+.rating-C{
+    background-color: #eabe06;
+}
+.rating-D{
+    background-color: #ed7d20;
+}
+.rating-E{
+    background-color: #e00; 
+}
+.rating {
+    display: inline-block;
+    border-radius: 24px;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 0 1px rgba(0,0,0,.35);
+}
+.project-card-measure-label-with-icon {
+    margin-top: 2px;
+    white-space: nowrap;
+}
+.little-spacer-right {
+    margin-right: 4px;
+}
+.vertical-bottom {
+    vertical-align: middle;
+}
+.duplications-rating {
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ed7d20;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+.duplications-rating-A {
+    border-color: #0a0;
+}
+.duplications-rating-B {
+    border-color: #b0d513;
+}
+.duplications-rating-C {
+    border-color: #eabe06;
+}
+.duplications-rating-D {
+    border-color: #ed7d20;
+}
+.duplications-rating-E {
+    border-color: #e00;
+}
+.duplications-rating:after {
+    border-radius: 24px;
+    content: "";
+}
+.duplications-rating-B:after {
+    width: 4px;
+    height: 4px;
+    background-color: #b0d513;
+}
+.duplications-rating-C:after {
+    width: 6px;
+    height: 6px;
+    background-color: #eabe06;
+}
+.duplications-rating-D:after {
+    width: 8px;
+    height: 8px;
+    background-color: #ed7d20;
+}
+.duplications-rating-E:after {
+    width: 10px;
+    height: 10px;
+    background-color: #e00;
+}
+.donut-chart{
+         position: relative;
+        display: inline-flex;
+        vertical-align: top;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #e00;
+        border-radius: 24px;
+        box-sizing: border-box;
+}
+.no-sonar-data{
+    color:#BBC1C4;
+}
+.project-card-measure{
+    margin:0 auto;
+}
+.project-card-measure+.project-card-measure:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 24px;
+    margin-top: -12px;
+    border-left: 1px solid #e6e6e6;
+    content: "";
+}
+.sonar-details-row .text-center{
+    text-align: center !important;
+    display: block;
+}
+.text-center .text-center{
+    text-align: center !important;
+}
+
+.project-card-measure-number .spacer-right + span{
+    vertical-align: middle;
+}
+
+.project-card-measure:first-child {
+    padding-left:0;
+    padding-right:0;
+}
+
+.project-card-measures {
+    width: 100vw;
+}
+.project-card-measure {
+    width: 20%;
+    margin:0 auto;
+}
+/* -----new design 3 cards
+.project-card-measures {
+    margin:5px;
+    margin-top:0px;
+}
+.project-card-measure {
+    margin: 0px;
+    padding: 0px 5px;
+    float:left;
+}
+.project-card-measure-number {
+    font-size:14px;
+}
+.rating {
+    width: 18px;
+    height: 18px;
+    line-height: 17px;
+    font-size: 0.75em;
+}
+.duplications-rating {
+    width: 18px;
+    height: 18px;
+    margin-top:5px;
+}
+.donut-chart{
+    width: 18px;
+    height: 18px;
+    font-size:18px;
+    margin-top:5px;
+}
+.project-card-measure-label-with-icon,.project-card-measure-label {
+    font-size:10px;
+}
+.no-sonar-data{
+    font-size:1.25em;
+    margin:0 150px;
+}*/
+/* new design 3 cards -------*/
+
+
+
+@media only screen and (min-width:320px)  {
+    
+    .project-card-measure {
+        width: 44%;
+      /*  padding: 0 20px;*/
+        float:left;
+    }
+    .project-card-measure:last-child{
+        padding: 0 ;
+    }
+    .project-card-measure-number {
+        font-size:0.5em;
+    }
+    .rating {
+        width: 18px;
+        height: 18px;
+        line-height: 17px;
+        font-size: 10px;
+    }
+    .duplications-rating {
+        width: 18px;
+        height: 18px;
+    }
+    .donut-chart{
+        width: 18px;
+        height: 18px;
+        font-size:18px;
+    }
+    .project-card-measure-label-with-icon,.project-card-measure-label {
+        font-size:0.5em;
+    }
+    .no-sonar-data{
+        font-size:0.75em;
+      /*  margin:0 60px; */
+    }
+}
+@media only screen and (min-width: 480px) {
+    
+    .project-card-measure-number {
+        font-size:12px;
+    }
+    .rating {
+        width: 18px;
+        height: 18px;
+        line-height: 17px;
+        font-size: 10px;
+    }
+    .duplications-rating {
+        width: 18px;
+        height: 18px;
+    }
+    .donut-chart{
+        width: 18px;
+        height: 18px;
+        font-size:18px;
+    }
+    .project-card-measure-label-with-icon,.project-card-measure-label {
+        font-size:10px;
+    }
+    .no-sonar-data{
+        font-size:0.75em;
+       /* margin:0 90px; */
+    }  
+}
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+   
+    .project-card-measure-number {
+        font-size:12px;
+    }
+    .rating {
+        width: 15px;
+        height: 15px;
+        line-height: 14px;
+        font-size: 10px;
+    }
+    .duplications-rating {
+        width: 15px;
+        height: 15px;
+    }
+    .donut-chart{
+        width: 15px;
+        height: 15px;
+        font-size:15px;
+    }
+    .project-card-measure-label-with-icon,.project-card-measure-label {
+        font-size:8px;
+    }  
+    .no-sonar-data{
+        font-size: 0.75em;
+     /*   margin: 0 105px; */
+    }  
+   
+}
+@media only screen and (min-width: 1224px) {
+    
+    .project-card-measures {
+        margin-left:-55px;
+        width:100vw;
+    }
+   
+    .project-card-measure-number {
+        font-size:1.2em;
+    }
+    .rating,.duplications-rating,.donut-chart {
+        width: 36px;
+        height: 36px;
+        line-height: 35px;
+        font-size: 1.2em;
+    }
+
+    .project-card-measure-label-with-icon,.project-card-measure-label {
+        font-size:1.2em;
+    }
+    .project-card-measure-label-with-icon {
+        margin-left:-10px;
+    }
+    
+    .no-sonar-data {
+        font-size:1.5em;
+     /*   margin:0 400px; */
+    }
+    .sonar-details-row {
+        min-height: 66px;
+    }
+    
+    .duplications-rating-B:after {
+        width: 9px;
+        height: 9px;
+    }
+    .duplications-rating-C:after {
+        width: 12px;
+        height: 12px;
+    }
+    .duplications-rating-D:after {
+        width: 15px;
+        height: 15px;
+    }
+    .duplications-rating-E:after {
+        width: 18px;
+        height: 18px;   
+    }
+
+}
+@media only screen and (min-width: 1824px) {
+    .project-card-measures {
+        margin-left: -77px;
+        width: 85vw;
+    }
+    .project-card-measure-number {
+        font-size:1.5em;
+    }
+    .rating,.duplications-rating,.donut-chart {
+        width: 48px;
+        height: 48px;
+        line-height: 47px;
+        font-size: 1.3em;
+    }
+    .sonar-details-row{
+        min-height:86px;
+    }
+    .project-card-measure-label-with-icon,.project-card-measure-label {
+        font-size:1.5em;
+    }
+    .no-sonar-data {
+        font-size:1.75em;
+       /* margin:0 450px; */
+    }
+    .duplications-rating-B:after {
+        width: 12px;
+        height: 12px;
+    }
+    .duplications-rating-C:after {
+        width: 15px;
+        height: 15px;
+    }
+    .duplications-rating-D:after {
+        width: 18px;
+        height: 18px;
+    }
+    .duplications-rating-E:after {
+        width: 21px;
+        height: 21px;   
+    }
+}
+
+
+
+
