@@ -30,7 +30,7 @@
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "ng2-charts": "^1.6.0",
     "ng2-scroll-to-el": "^1.2.1",
